@@ -34,7 +34,7 @@ export default function Page() {
       console.log(formData);
    try {
         const API_URL = process.env.NEXT_PUBLIC_API_BASE_URL
-        const res = await axios.post(`${API_URL}/api/v1/users/register`, formData)
+        const res = await axios.post(`${API_URL}api/v1/users/register`, formData)
         console.log('Dummy registered:', res.data)
         alert(res.data.message || 'Dummy Registered')
       } catch (err) {
